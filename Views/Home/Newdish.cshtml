@@ -1,0 +1,55 @@
+@model Dish
+
+<div class="title">
+        <h1>Add a new Dish!</h1>
+    </div>
+    <div id="home">
+        <h3>
+            <a href="/">Home</a>
+        </h3>
+    </div>    
+    <form asp-action="Create" asp-controller="Home">
+        <div class="column-con">
+            <div class="column">
+                <p>
+                    <label asp-for="ChefName"></label>
+                    <span asp-validation-for="ChefName"></span>
+                    <input asp-for="ChefName" type="text">
+                </p>
+                <p>
+                    <label asp-for="DishName"></label>
+                    <span asp-validation-for="DishName"></span>
+                    <input asp-for="DishName" type="text">
+                </p>
+                <p>
+                    <label asp-for="Calories"></label>
+                    <span asp-validation-for="Calories"></span>
+                    <input asp-for="Calories" type="text">
+                </p>
+            </div>
+            <div class="column">
+                <div>
+                    <label asp-for="Tastiness"></label>
+                    <span asp-validation-for="Tastiness"></span>
+                </div>
+                <select asp-for="Tastiness" id="tastiness">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+            </div>
+            <div class="column">
+                <div>
+                    <label asp-for="Description"></label>
+                    <span asp-validation-for="Description"></span>
+                </div>
+                <textarea asp-for="Description" id="description"></textarea>
+                </select>
+                <div>
+                    <button class ="btn" class="btn-success">Add Dish</button>
+                </div>
+            </div>
+        </div>
+    </form>    
